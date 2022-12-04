@@ -60,7 +60,7 @@ class Main(QDialog):
                     if int(item)>=0:
                         answer = pro_of_k_i - sum_of_k_i
                     else:
-                        answer = sum_square ** (1/3)
+                        answer = sum_square ** (1./3.)
                     self.tableWidget.setItem(i, j, QTableWidgetItem(str(format(answer, ".5f"))))
                 except Exception:
                     self.tableWidget.setItem(i, j, QTableWidgetItem('none'))

@@ -47,7 +47,7 @@ class Main(QDialog):
 
             pro_of_k_i = 1
             sum_of_k_i = 0
-            sum_square = 1
+            sum_square = 0
 
             while i < self.tableWidget.rowCount():
                 item = self.tableWidget.item(i, 0).text()
@@ -55,7 +55,7 @@ class Main(QDialog):
                     sum_of_k_i *= int(item)
                 else:
                     pro_of_k_i += int(item)
-                sum_square += (int(item) * int(item))
+                sum_square += int(item) ** 2
                 try:
                     if int(item)>=0:
                         answer = pro_of_k_i - sum_of_k_i
